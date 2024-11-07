@@ -23,4 +23,3 @@ jobs:
           echo "action:" ${{ github.action }}
           echo "events ref name:" ${{github.ref_name}}
           echo "events url :" ${{github.api_url}}
-
