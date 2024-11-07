@@ -6,7 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
-  
 
 jobs:
   build:
@@ -19,3 +18,9 @@ jobs:
         run: echo "Hello World"
       - name: testing in yml
         run: echo "testint in yml ${{env.NODE_VERSION}} "
+      - name: "events with github actions"
+        run: |
+          echo "action:" ${{ github.action }}
+          echo "events ref name:" ${{github.ref_name}}
+          echo "events url :" ${{github.api_url}}
+
