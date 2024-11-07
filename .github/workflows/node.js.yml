@@ -6,15 +6,16 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  
 
 jobs:
   build:
+    env:
+      NODE_VERSION: NODE_VERSION_16
     runs-on: ubuntu-latest
 
     steps:
       - name: hello world
         run: echo "Hello World"
       - name: testing in yml
-        run: echo "testint in yml"
+        run: echo "testint in yml ${{env.NODE_VERSION}} "
