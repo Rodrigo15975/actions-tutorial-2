@@ -11,6 +11,7 @@ jobs:
   build:
     env:
       NODE_VERSION: NODE_VERSION_16
+      username: ${{secrets.USERNAME  }}
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +24,7 @@ jobs:
           echo "action:" ${{ github.action }}
           echo "events ref name:" ${{github.ref_name}}
           echo "events url :" ${{github.api_url}}
+          echo "events path :" ${{github.path}}
+          echo "events repository name owner :" ${{github.repository_owner}}
+          echo "events repository:" ${{github.repository}}
+          echo "secrets repository username:" ${{env.username}}
